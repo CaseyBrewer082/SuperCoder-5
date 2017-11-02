@@ -66,7 +66,7 @@ def showColours():
 #enables all colour buttons
 def enableButtons():
 	singlebuttonr1.config(state='normal')
-	singlebttonb1.config(state='normal')
+	singlebuttonb1.config(state='normal')
 	singlebuttono1.config(state='normal')
 	singlebuttong1.config(state='normal')
 	singlebuttongr1.config(state='normal')
@@ -135,34 +135,34 @@ img6 = PhotoImage(file = coloursimg['singlebutton br1.gif'])
 
 
 #Buttons
-singlebuttonr1 = Button(master, state='disabled', image = img0)
-singlebuttonb1 = Button(master, state='disabled', image = img1)
-singlebuttono1 = Button(master, state='disabled', image = img2)
-singlebuttongr1 = Button(master, state='disabled', image = img3)
-singlebuttong1 = Button(master, state='disabled', image = img4)
-singlebuttonp1 = Button(master, state='disabled', image = img5)
-singlebuttonbr1 = Button(master, state='disabled', image = img6)
+singlebuttonr1 = Button(master, state='disabled', image = img0, command= lambda: addColour('singlebutton r1.gif'))
+singlebuttonb1 = Button(master, state='disabled', image = img1, command= lambda: addColour('singlebutton b1.gif'))
+singlebuttono1 = Button(master, state='disabled', image = img2, command= lambda: addColour('singlebutton o1.gif'))
+singlebuttongr1 = Button(master, state='disabled', image = img3, command= lambda: addColour('singlebutton gr1.gif'))
+singlebuttong1 = Button(master, state='disabled', image = img4, command= lambda: addColour('singlebutton g1.gif'))
+singlebuttonp1 = Button(master, state='disabled', image = img5, command= lambda: addColour('singlebutton p1.gif'))
+singlebuttonbr1 = Button(master, state='disabled', image = img6, command= lambda: addColour('singlebutton br1.gif'))
 start = Button(master, text="start", bg="lightgrey", command=game)
 
 #dictionary of button objects
 buttons = {
-	'singlebutton r1.gif': red,
-	'singlebutton b1.gif': blue,
-	'singlebutton o1.gif': yellow,
-	'singlebutton g1.gif': green,
-        'singlebutton gr1.gif': white,
-        'singlebutton p1.gif': purple,
-        'singlebutton br1.gif': brown
+	'singlebutton r1.gif': singlebuttonr1,
+	'singlebutton b1.gif': singlebuttonb1,
+	'singlebutton o1.gif': singlebuttono1,
+	'singlebutton g1.gif': singlebuttongr1,
+        'singlebutton gr1.gif': singlebuttong1,
+        'singlebutton p1.gif': singlebuttonp1,
+        'singlebutton br1.gif': singlebuttonbr1
 }
 
 #button placement
-red.place(x = 400, y = 55)
-blue.place(x = 494, y = 100)
-green.place(x = 515, y = 202)
-yellow.place(x = 446, y = 286)
-white.place(x = 354, y = 286)
-purple.place(x = 284, y = 202)
-brown.place(x = 306, y = 100)
+singlebuttonr1.place(x = 400, y = 55)
+singlebuttonb1.place(x = 494, y = 100)
+singlebuttono1.place(x = 515, y = 202)
+singlebuttongr1.place(x = 446, y = 286)
+singlebuttong1.place(x = 354, y = 286)
+singlebuttonp1.place(x = 284, y = 202)
+singlebuttonbr1.place(x = 306, y = 100)
 start.place(x = 430, y = 400)
 
 #main
